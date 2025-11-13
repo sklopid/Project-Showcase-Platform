@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.AdminMapper">
+    <select id="selectAll" resultType="com.example.entity.Admin">
+        select * from `admin`
+        <where>
+            <if test="name != null">
+                name like concat('%',#{name},'%') <!-- equal %1%-->
+            </if>
+            <if test="username != null">
+                and username like concat('%',#{username},'%') <!-- equal %1%-->
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="id">
+        insert into `admin`(username,password,name,phone,email,zone,role,avatar)
+        values(#{username},#{password},#{name},#{phone},#{email},#{zone},#{role},#{avatar})
+    </insert>
+
+    <select id="selectByUsername">
+        select * from `admin`
+        where username = #{username}
+    </select>
+    
+    <update id="updateById">
+        update `admin` set username = #{username},password = #{password},name=#{name},phone=#{phone},email=#{email},zone=#{zone},role=#{role},avatar=#{avatar}
+        where id = #{id}
+    </update>
+
+    <update id="updatePassword">
+        update `admin` set password = #{newPassword}
+        where id = #{id}
+    </update>
+
+    <select id="selectById">
+        select * from `admin`
+        where id = #{userId}
+    </select>
+
+</mapper>
