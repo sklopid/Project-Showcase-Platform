@@ -34,20 +34,12 @@
         <div style="display: flex;">
             <!--菜单区域开始-->
             <div style="width: 240px;background-color: #3a456b;">
-                <el-menu router :default-openeds="['1','2']"  :default-active="router.currentRoute.value.path" style="min-height: calc(100vh - 60px);" >
+                <el-menu router :default-openeds="['1']"  :default-active="router.currentRoute.value.path" style="min-height: calc(100vh - 60px);" >
                     <el-menu-item index="/manager/home">
                         <el-icon><House /></el-icon>
                         <span>首页</span>
                     </el-menu-item>
                     <el-sub-menu index="1">
-                        <template #title>
-                            <el-icon><Monitor /></el-icon>
-                            <span>系统公告</span>
-                        </template>
-                        <el-menu-item index="/manager/notice">notice</el-menu-item>
-                        <el-menu-item index="/manager/program">program</el-menu-item>
-                    </el-sub-menu>
-                    <el-sub-menu index="2">
                         <template #title>
                             <el-icon><User /></el-icon>
                             <span>manage user</span>

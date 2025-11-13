@@ -10,7 +10,6 @@ public class Admin extends Account{
     private String name;
     private String phone;
     private String email;
-    private String zone;
     private String role;
     private String token;
     private String avatar;
@@ -21,14 +20,6 @@ public class Admin extends Account{
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
     }
 
     public String getName() {

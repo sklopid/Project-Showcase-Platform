@@ -10,7 +10,6 @@ public class User extends Account{
     private String name;
     private String phone;
     private String email;
-    private String zone;
     private String role;
     private String avatar;
 
@@ -20,14 +19,6 @@ public class User extends Account{
 
     public void setRole(String role) {
         this.role = role;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
     }
 
     public String getName() {

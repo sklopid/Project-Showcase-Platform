@@ -17,8 +17,8 @@
     </select>
 
     <insert id="insert"  useGeneratedKeys="true" keyProperty="id">
-        insert into `admin`(username,password,name,phone,email,zone,role,avatar)
-        values(#{username},#{password},#{name},#{phone},#{email},#{zone},#{role},#{avatar})
+        insert into `admin`(username,password,name,phone,email,role,avatar)
+        values(#{username},#{password},#{name},#{phone},#{email},#{role},#{avatar})
     </insert>
 
     <select id="selectByUsername">
@@ -27,7 +27,7 @@
     </select>
     
     <update id="updateById">
-        update `admin` set username = #{username},password = #{password},name=#{name},phone=#{phone},email=#{email},zone=#{zone},role=#{role},avatar=#{avatar}
+        update `admin` set username = #{username},password = #{password},name=#{name},phone=#{phone},email=#{email},role=#{role},avatar=#{avatar}
         where id = #{id}
     </update>
 

@@ -24,7 +24,6 @@
               <el-table-column prop="username" label="Username" width="180" />
               <el-table-column prop="name" label="Name" width="180" />
               <el-table-column prop="email" label="Email" />
-              <el-table-column prop="zone" label="Zone" />
               <el-table-column label="Opreation" width="100">
                 <template #default="scope">
                   <el-button type="primary" icon="Edit" circle @click="handleEdit(scope.row)"></el-button>
@@ -60,12 +59,6 @@
               </el-form-item>
               <el-form-item prop="phone" label="Phone">
                 <el-input v-model="data.form.phone" autocomplete="off" />
-              </el-form-item>
-               <el-form-item prop="zone"label="Zones">
-                <el-select v-model="data.form.zone" placeholder="Please select a zone">
-                <el-option label="Zone No.1" value="shanghai" />
-                <el-option label="Zone No.2" value="beijing" />
-                </el-select>
               </el-form-item>
               <el-form-item prop="avatar" label="Avatar">
                 <el-upload

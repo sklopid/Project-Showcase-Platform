@@ -7,7 +7,6 @@ public class Account {
     private String name;
     private String phone;
     private String email;
-    private String zone;
     private String role;
     private String token;
     private String avatar;
@@ -94,13 +93,6 @@ public class Account {
         this.email = email;
     }
 
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
-    }
 
     public String getRole() {
         return role;
